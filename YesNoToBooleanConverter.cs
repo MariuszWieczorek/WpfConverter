@@ -14,10 +14,10 @@ namespace WpfConverter
 			switch (value.ToString().ToLower())
 			{
 				case "yes":
-				case "oui":
+				case "tak":
 					return true;
 				case "no":
-				case "non":
+				case "nie":
 					return false;
 			}
 			return false;

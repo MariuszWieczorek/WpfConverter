@@ -13,12 +13,12 @@
 
     <Border Padding="10" BorderBrush="Beige" BorderThickness="10">
     <StackPanel Margin="10">
-        <TextBox Name="txtValue" />
-        <WrapPanel Margin="0,10">
+        <TextBox x:Name="txtNapis" />
+        <StackPanel Margin="0,10" Orientation="Horizontal">
             <TextBlock Text="Current value is: " />
-            <TextBlock Text="{Binding ElementName=txtValue, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}"></TextBlock>
-        </WrapPanel>
-        <CheckBox IsChecked="{Binding ElementName=txtValue, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}" Content="Yes" />
+            <TextBlock Text="{Binding ElementName=txtNapis, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}"></TextBlock>
+        </StackPanel>
+        <CheckBox IsChecked="{Binding ElementName=txtNapis, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}" Content="Yes" />
     </StackPanel>
     </Border>
 </Window>

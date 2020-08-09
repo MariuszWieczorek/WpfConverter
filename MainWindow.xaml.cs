@@ -23,6 +23,7 @@ namespace WpfConverter
         public MainWindow()
         {
             InitializeComponent();
+            
         }
     }
 }

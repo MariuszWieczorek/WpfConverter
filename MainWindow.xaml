@@ -6,19 +6,24 @@
         xmlns:local="clr-namespace:WpfConverter"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
+
     <Window.Resources>
         <local:YesNoToBooleanConverter x:Key="YesNoToBooleanConverter" />
     </Window.Resources>
 
     <Border Padding="10" BorderBrush="Beige" BorderThickness="10">
-    <StackPanel Margin="10">
-        <TextBox x:Name="txtNapis" />
-        <StackPanel Margin="0,10" Orientation="Horizontal">
-            <TextBlock Text="Current value is: " />
-            <TextBlock Text="{Binding ElementName=txtNapis, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}"></TextBlock>
+
+        <StackPanel Margin="10">
+            <TextBox x:Name="txtNapis" />
+            <StackPanel Margin="0,10" Orientation="Horizontal">
+                <TextBlock Text="Current value is: " />
+                <TextBlock Text="{Binding ElementName=txtNapis, Path=Text,
+            Converter={StaticResource YesNoToBooleanConverter}}"></TextBlock>
+            </StackPanel>
+            <CheckBox IsChecked="{Binding ElementName=txtNapis, Path=Text,
+        Converter={StaticResource YesNoToBooleanConverter}}" Content="Yes" 
+        Checked="CheckBox_Checked" />
         </StackPanel>
-        <CheckBox IsChecked="{Binding ElementName=txtNapis, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}" Content="Yes" />
-    </StackPanel>
+
     </Border>
 </Window>
